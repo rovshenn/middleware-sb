@@ -14,7 +14,7 @@ public class Guest {
     private String firstName;
 
     @Column(name = "LAST_NAME")
-    private String lastNumber;
+    private String lastName;
 
     @Column(name = "EMAIL_ADDRESS")
     private String emailAddress;
@@ -47,12 +47,12 @@ public class Guest {
         this.firstName = firstName;
     }
 
-    public String getLastNumber() {
-        return lastNumber;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastNumber(String lastNumber) {
-        this.lastNumber = lastNumber;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmailAddress() {

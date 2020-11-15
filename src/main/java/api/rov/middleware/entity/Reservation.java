@@ -1,7 +1,7 @@
 package api.rov.middleware.entity;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name="RESERVATION")
@@ -12,13 +12,29 @@ public class Reservation {
     private long reservationId;
 
     @Column(name = "ROOM_ID")
-    private String roomId;
+    private long roomId;
 
     @Column(name = "GUEST_ID")
-    private String guestId;
+    private long guestId;
 
     @Column(name = "RES_DATE")
     private Date resDate;
+
+    public long getRoomId() {
+        return roomId;
+    }
+
+    public void setRoomId(long roomId) {
+        this.roomId = roomId;
+    }
+
+    public long getGuestId() {
+        return guestId;
+    }
+
+    public void setGuestId(long guestId) {
+        this.guestId = guestId;
+    }
 
     public long getReservationId() {
         return reservationId;
@@ -26,22 +42,6 @@ public class Reservation {
 
     public void setReservationId(long reservationId) {
         this.reservationId = reservationId;
-    }
-
-    public String getRoomId() {
-        return roomId;
-    }
-
-    public void setRoomId(String roomId) {
-        this.roomId = roomId;
-    }
-
-    public String getGuestId() {
-        return guestId;
-    }
-
-    public void setGuestId(String guestId) {
-        this.guestId = guestId;
     }
 
     public Date getResDate() {
